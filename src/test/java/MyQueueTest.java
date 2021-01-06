@@ -17,4 +17,19 @@ public class MyQueueTest {
         myQueue.printQueue();
         Assert.assertEquals(myNode,myFirstNode);
     }
+
+    @Test
+    public void given3NumbersWhenDequeueFromBeginning() {
+        MyNode<Integer> myFirstNode=new MyNode<>(56);
+        MyNode<Integer> mySecondNode=new MyNode<>(30);
+        MyNode<Integer> myThirdNode=new MyNode<>(70);
+        MyQueue<Integer> myQueue=new MyQueue<>();
+        myQueue.enqueue(myFirstNode);
+        myQueue.enqueue(mySecondNode);
+        myQueue.enqueue(myThirdNode);
+        INode<Integer> myNode=myQueue.dequeue();
+        myQueue.printQueue();
+        Assert.assertEquals(myNode,myThirdNode);
+
+    }
 }

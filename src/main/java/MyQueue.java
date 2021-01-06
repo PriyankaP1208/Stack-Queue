@@ -21,4 +21,7 @@ public class MyQueue<K extends Comparable<K>> {
         myLinkedList.printMyNodes();
     }
 
+    public INode<K> dequeue() {
+        return myLinkedList.popLast();
+    }
 }
